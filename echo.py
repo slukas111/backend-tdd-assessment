@@ -2,10 +2,11 @@
 # -*- coding: utf-8 -*-
 """An enhanced version of the 'echo' cmd line utility"""
 
-__author__ = "???"
+__author__ = "Sasha Lukas"
 
 
 import sys
+
 
 
 def create_parser():
