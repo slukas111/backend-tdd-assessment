@@ -14,7 +14,12 @@ class TestEcho(unittest.TestCase):
     def test_upper_short(self):
         self.fail("You need to write this test")
 
-        
+    def test_lower_short(self):
+        self.fail("You need to write this test")
+
+    def test_title_short(self):
+        self.fail("You need to write this test")
+
 
 if __name__ == '__main__':
     unittest.main()
