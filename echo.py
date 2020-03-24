@@ -11,12 +11,23 @@ import argparse
 
 def create_parser():
     """Creates and returns an argparse cmd line option parser"""
-    pass
+    parser = argparse.ArgumentParser("Perform transformation on input text.")
+    parser.add_argument("-u", "--upper", action="store_true", help="convert text to uppercase")
+    parser.add_argument("-l", "--lower", help="convert text to lowercase")
+    parser.add_argument("-t", "--title", help="convert text to titlecase")
+    parser.add_argument("text", help="text to be manipulated")
+    return parser
 
 
 def main(args):
     """Implementation of echo"""
-    result = "Dummy Result"
+    parser = create_parser()
+    ns = parser.parse_args(args)
+
+    result = ns.text
+    if ns.upper is True:
+        result = result.upper()
+
     return result
 
 
