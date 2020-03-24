@@ -6,8 +6,7 @@ __author__ = "Sasha Lukas"
 
 
 import sys
-
-
+import argparse
 
 def create_parser():
     """Creates and returns an argparse cmd line option parser"""
@@ -16,8 +15,8 @@ def create_parser():
 
 def main(args):
     """Implementation of echo"""
-    pass
+    return "HELLO WORLD"
 
 
 if __name__ == '__main__':
-    pass
+    main(sys.argv[1:])

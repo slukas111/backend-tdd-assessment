@@ -12,13 +12,23 @@ class TestEcho(unittest.TestCase):
         pass
 
     def test_upper_short(self):
-        self.fail("You need to write this test")
+        # self.fail("You need to write this test")
+        args = ["-u", "hello world"]
+        actual = echo.main(args)
+        expected = "HELLO WORLD"
+        self.assertEqual(actual, expected)
 
     def test_lower_short(self):
-        self.fail("You need to write this test")
+        args = ["-l", "HelLo WorLD"]
+        actual = echo.main(args)
+        expected = "hello world"
+        self.assertEqual(actual, expected)
 
     def test_title_short(self):
-        self.fail("You need to write this test")
+        args = ["-t", "HelLo WorLD"]
+        actual = echo.main(args)
+        expected = "Hello World"
+        self.assertEqual(actual, expected)
 
     def test_upper_long(self):
         self.fail("You need to write this test")
