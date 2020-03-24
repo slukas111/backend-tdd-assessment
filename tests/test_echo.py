@@ -20,6 +20,15 @@ class TestEcho(unittest.TestCase):
     def test_title_short(self):
         self.fail("You need to write this test")
 
+    def test_upper_long(self):
+        self.fail("You need to write this test")
+
+    def test_lower_long(self):
+        self.fail("You need to write this test")
+
+    def test_title_long(self):
+        self.fail("You need to write this test")
+
 
 if __name__ == '__main__':
     unittest.main()
