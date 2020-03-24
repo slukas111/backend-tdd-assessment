@@ -8,7 +8,7 @@ import echo
 # Your test case class goes here
 class TestEcho(unittest.TestCase):
 
-    def setU(self):
+    def setUp(self):
         self.parser = echo.create_parser()
 
     def test_upper_short(self):

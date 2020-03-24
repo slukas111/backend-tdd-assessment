@@ -13,8 +13,8 @@ def create_parser():
     """Creates and returns an argparse cmd line option parser"""
     parser = argparse.ArgumentParser("Perform transformation on input text.")
     parser.add_argument("-u", "--upper", action="store_true", help="convert text to uppercase")
-    parser.add_argument("-l", "--lower", help="convert text to lowercase")
-    parser.add_argument("-t", "--title", help="convert text to titlecase")
+    parser.add_argument("-l", "--lower", action="store_true", help="convert text to lowercase")
+    parser.add_argument("-t", "--title", action="store_true", help="convert text to titlecase")
     parser.add_argument("text", help="text to be manipulated")
     return parser
 
@@ -27,6 +27,10 @@ def main(args):
     result = ns.text
     if ns.upper is True:
         result = result.upper()
+    if ns.lower is True:
+        result = result.lower()
+    if ns.title is True:
+        result = result.title()
 
     return result
 
